@@ -1,7 +1,13 @@
 const mongoose=require('mongoose');
 
 const noteSchema=mongoose.Schema({
-    text:{
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        required:true,
+        ref:'User',
+
+    },
+    note:{
         type:String,
         required:[true,'Please add a body for post']
     }
