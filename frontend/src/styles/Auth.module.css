@@ -1,0 +1,117 @@
+.authForm-fullWrapper{
+    padding: 5rem 0 5rem 0;
+    margin:6rem auto;
+    width:min(500px,90vw);
+}
+
+.authForm-wrapper{
+    height: 100%;
+    width: 100%;
+    border:2px solid var(--blackl2);
+    border-radius:6px;
+}
+
+.auth-heading{
+    width: 15rem;
+    text-align: center;
+    border-bottom: 2px solid var(--blackl2);
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    color: var(--pink5); 
+    padding-top:2rem ;
+    margin: auto;
+}
+
+.auth-heading:hover{
+    color: var(--tomatoOrange);
+}
+
+.input-wrapper{
+    position: relative;
+    padding: 4rem 4rem 1.2rem;
+}
+
+/* .input-wrapper input{
+    color: var(--yellowGold);
+} */
+
+.text-input,.text-label{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.input-wrapper .text-input{
+    margin-bottom: 1.6rem;
+    border: 2px solid var(--blackl2);
+    outline-color: var(--purple-main);
+    height: 3rem;
+
+}
+
+.input-wrapper .text-label{
+    margin-bottom: 0.6rem;
+    color:var(--pink5);
+    font-weight:600;
+}
+
+.link-btn{
+    text-decoration: none;
+    color: var(--tomatoOrange);
+}
+
+.password-wrapper{
+    margin: 0 4rem 1rem 4rem;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+
+.sign-link{
+    text-align: center;
+    padding-bottom:3rem ;
+}
+
+.sign-link a{
+    color: var(--pink5);
+    font-size: 1.8rem;
+    font-weight: 400;
+    border-bottom:1px solid var(--pink5) ;
+   
+}
+
+.eye-icon{
+    position: absolute;
+    top: 73.8%;
+    right: 5rem;
+    color: var(--yellowGold);
+    cursor: pointer;
+}
+
+.login-btn ,.test-btn{
+    margin: 2rem auto 1rem;
+    color: var(--yellowGold);
+}
+
+/*Login Button CSS  */
+
+.btn-primary{
+    /* background-color: var(--purple-main); */
+    border: 2px solid var(--pink5);
+    border-radius: 0;
+    color: var(--pink5);
+    font-size: 1.7rem;
+    padding: 0.8rem 1.4rem;
+    text-transform: capitalize;
+    text-transform: uppercase;
+    width: 35rem;
+    max-width: 76%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover{
+    background-color: var(--pink4);
+    color:var(--gold1);
+}
