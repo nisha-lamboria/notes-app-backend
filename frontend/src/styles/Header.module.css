@@ -1,0 +1,44 @@
+.header {
+    z-index: 10;
+    height: 8rem;
+    min-width: 300px;
+    display: flex;
+    position: relative;
+    box-shadow:  10px 10px 20px var(--pink3),
+             -10px -10px 20px #f0f0f0;
+    padding:0 6rem;
+}
+
+.logo-name {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color:var(--tomatoOrange);
+}
+
+.logo-name:hover {
+    color: var(--pink6);
+}
+
+.actions{
+    column-gap: 3rem;
+    margin-left: auto;
+    margin-top: 1.5rem;
+}
+.actions a{
+    color: var(--pink4);
+}
+
+.icon{
+    background-color: var(--pink4);
+    border-radius: 100%;
+    padding: 1rem;
+    color:var(--gold1);
+}
+
+.actions a:hover{
+    color: var(--blackl1);
+}
+
+.actions-title{
+    color:var(--tomatoOrange)
+}

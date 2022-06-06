@@ -1,0 +1,13 @@
+@import url(styles/utils.css);
+body {
+  margin: 0;
+  font-size:1.6rem;
+  font-family: 'Satisfy', cursive,'Nunito', sans-serif,'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

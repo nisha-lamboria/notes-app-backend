@@ -7,9 +7,13 @@ const noteSchema=mongoose.Schema({
         ref:'User',
 
     },
+    noteTitle:{
+        type:String,
+        required:[true,'Please add a notetitle for post']
+    },
     note:{
         type:String,
-        required:[true,'Please add a body for post']
+        required:[true,'Please add a note body for post']
     }
 },{
     timestamps:true,

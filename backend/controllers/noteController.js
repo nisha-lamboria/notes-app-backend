@@ -15,7 +15,8 @@ const setNote=asyncHandler(async(req,res)=>{
     }
     const createdNote=await Note.create({
         note:req.body.note,
-        user:req.user.id
+        user:req.user.id,
+        noteTitle:req.body.noteTitle
     })
     res.status(200).json({message:createdNote});
 })
