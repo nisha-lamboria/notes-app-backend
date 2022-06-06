@@ -28,7 +28,7 @@
     color: var(--pink4);
 }
 
-.actions a .icon{
+.icon{
     background-color: var(--pink4);
     border-radius: 100%;
     padding: 1rem;

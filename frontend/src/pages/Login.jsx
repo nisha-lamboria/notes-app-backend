@@ -2,10 +2,20 @@ import AuthStyles from "../styles/Auth.module.css";
 import "../styles/common.css";
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { useToast } from "../custom hooks/useToast";
+import { useDispatch,useSelector } from "react-redux";
+import { login,reset } from "../features/authSlice";
+import { Loader } from "../components/Loader/Loader";
+
 
 const Login = () => {
   const [authForm, setAuthForm] = useState({});
+
+  const {email,password}=authForm;
+  const {toastBox}=useToast();
+  const dispatch=useDispatch();
+  const {user,errMessage,loading}=useSelector(state=>state.auth);
 
   const onChange = (e) => {
     setAuthForm(() => ({
@@ -15,7 +25,26 @@ const Login = () => {
   };
   const authSubmit = (e) => {
     e.preventDefault();
+    dispatch(login({email,password}));
   };
+
+  useEffect(()=>{
+    if(user){
+      toastBox(`logged in`,'success')
+    }else if(errMessage){
+      toastBox(`${errMessage}`,'error')
+    }
+    dispatch(reset());
+  },[user,errMessage,dispatch,toastBox])
+
+  if(loading){
+    return <Loader/>
+  }
+
+  const guestLogin=()=>{
+    dispatch(login({email:"nishaa@gmail.com",password:"nisha1$N"}));
+  }
+
   return (
     <div>
       <Header />
@@ -52,7 +81,7 @@ const Login = () => {
               Sign In
             </button>
           </form>
-          {/* <button className={`${AuthStyles["btn-primary"]} ${AuthStyles["test-btn"]} button`} onClick={guestLogin}>Guest Login</button> */}
+          <button className={`${AuthStyles["btn-primary"]} ${AuthStyles["test-btn"]} button`} onClick={guestLogin}>Guest Login</button>
           <div className={`${AuthStyles["sign-link"]}`}>
             <Link to="/Signup">Create New Account</Link>
           </div>
