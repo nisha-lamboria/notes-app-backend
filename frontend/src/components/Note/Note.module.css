@@ -1,0 +1,66 @@
+.note-wrapper{
+    display:flex;
+    flex-direction:column;
+    width:min(500px,90%);
+    margin:4rem auto;
+    position:relative;
+}
+
+.note-body,.note-input{
+    width:100%;
+    background-color:var(--dull-pink1);
+    color:var(--pink6);
+    border:1px solid var(--dull-pink1);
+    padding:1rem;
+}
+
+.note-input:focus{
+    border:1px solid var(--light-red);
+}
+
+.note-body{
+    resize:none;
+}
+
+.save-note{
+    position:absolute;
+    bottom:2px;
+    margin-left:2px;
+    color:var(--gold1);
+    background-color:var(--light-red);
+    padding:5px;
+}
+
+.notes-list-wrapper{
+    display:flex;
+    gap:2rem;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-bottom:2rem;
+}
+
+.saved-note{
+    width:250px;
+    background-color:var(--gold1);
+    color:var(--pink5);
+    display:flex;
+    flex-direction:column;
+    word-wrap:break-word;
+    text-align:center;
+    padding:1rem;
+    position:relative;
+}
+
+.note-text{
+    font-size:2rem;
+}
+
+.note-delete{
+    position:absolute;
+    font-weight:600;
+    background-color:var(--pink4);
+    color:var(--gold1);
+    border-radius:100%;
+    width:3rem;
+    height:3rem;
+}

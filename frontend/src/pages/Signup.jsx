@@ -37,13 +37,12 @@ const Signup = () => {
 
   useEffect(()=>{
     if(user){
-      // navigate("/")
       toastBox(`signed up `,'success')
     }else if(errMessage){
       toastBox(`${errMessage}`,'error')
     }
     dispatch(reset());
-  },[user,errMessage,dispatch,toastBox])
+  },[user,errMessage,dispatch])
 
   return (
     <div>
