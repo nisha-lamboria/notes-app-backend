@@ -8,7 +8,7 @@ const port=process.env.PORT||5000;
 
 connectDB(); 
 
-const app=express();
+const app=express(); 
 
 app.use(cors());
 
