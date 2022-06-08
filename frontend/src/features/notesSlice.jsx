@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { createNoteService, getNotesService, removeNoteService } from "../services/notesService";
+import { createNoteService, getNotesService, removeNoteService,updateNoteService } from "../services/notesService";
 
 const initialState={
     notes:[],
@@ -9,6 +9,7 @@ const initialState={
 }
 
 export const createNote=createAsyncThunk("/notes/createNote",async(note,thunkAPI)=>{
+    // console.log(note)
     try{
         const token=thunkAPI.getState().auth.user.token
         return await createNoteService(note,token)
@@ -30,6 +31,17 @@ export const removeNote=createAsyncThunk("/notes/removeNote",async(noteId,thunkA
     try{
         const token=thunkAPI.getState().auth.user.token
         return await removeNoteService(noteId,token)
+    }catch(error){
+        return thunkAPI.rejectWithValue(error.message)
+    }
+})
+
+export const updateNote=createAsyncThunk("/notes/updateNote",async(noteId,newNoteObj,thunkAPI)=>{
+    console.log(noteId,newNoteObj)
+    try{
+        const token=thunkAPI.getState().auth.user.token
+        const newNoteDetails= await updateNoteService(noteId,newNoteObj,token)
+        return newNoteDetails
     }catch(error){
         return thunkAPI.rejectWithValue(error.message)
     }
@@ -84,6 +96,22 @@ export const notesDataSlice=createSlice({
             state.loading=false
             state.errMessage=action.payload
         })
+        // .addCase(updateNote.pending,(state)=>{
+        //     state.loading=true
+        // })
+        // .addCase(updateNote.fulfilled,(state,action)=>{
+        //     const noteFound=state.notes.find(state.notes(noteObj=>noteObj._id===action.payload.id))
+        //     state.loading=false
+        //     state.success=true
+        //     if(noteFound){
+        //         state.notes.push(noteFound.replace(action.payload))
+        //     }
+            
+        // })
+        // .addCase(updateNote.rejected,(state,action)=>{
+        //     state.loading=false
+        //     state.errMessage=action.payload
+        // })
        
     }
 })

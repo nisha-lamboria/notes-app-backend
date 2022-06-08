@@ -31,3 +31,14 @@ export const removeNoteService=async(noteId,token)=>{
     const response=await axios.delete(`${API_ENDPOINTS}/notes/${noteId}`,config);
     return response.data;
 }
+
+export const updateNoteService=async(noteId,newNoteObj,token)=>{
+    const config={
+        headers:{
+            Authorization:`Bearer ${token}`
+        }
+    }
+    const response=await axios.put(`${API_ENDPOINTS}/notes/${noteId}`,newNoteObj,config);
+    console.log(response);
+    return response.data;
+}

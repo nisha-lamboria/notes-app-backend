@@ -36,7 +36,7 @@ const AddNote = () => {
         className={`${NoteStyles["note-body"]}`}
         >
         </textarea>
-        <button type="submit" className={`${NoteStyles["save-note"]}`}>Save Note</button>
+        <button type="submit" className={`${NoteStyles["save-note-btn"]}`}>Save Note</button>
     </form>
   )
 }

@@ -22,6 +22,7 @@ const setNote=asyncHandler(async(req,res)=>{
 })
 
 const updateNote=asyncHandler(async(req,res)=>{
+    console.log(req)
     const noteById=await Note.findById(req.params.id);
     if(!noteById){
         res.status(400)

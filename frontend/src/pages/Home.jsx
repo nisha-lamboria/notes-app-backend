@@ -22,7 +22,7 @@ const Home = () => {
       navigate("/login");
     }
     dispatch(getNotes());
-  }, [user,errMessage]);
+  }, [user,errMessage,dispatch]);
 
   if(loading){
     return <Loader/>
