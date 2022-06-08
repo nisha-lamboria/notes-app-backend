@@ -12,7 +12,7 @@ const Home = () => {
   const dispatch=useDispatch();
 
   const { user } = useSelector((state) => state.auth);
-  const {notes,loading,errMessage}=useSelector((state)=>state.notesData);
+  const {loading,errMessage}=useSelector((state)=>state.notesData);
 
   useEffect(() => {
     if(errMessage){
