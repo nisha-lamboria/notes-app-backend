@@ -22,6 +22,7 @@ const Home = () => {
       navigate("/login");
     }
     dispatch(getNotes());
+    // eslint-disable-next-line
   }, [user,errMessage,dispatch]);
 
   if(loading){
