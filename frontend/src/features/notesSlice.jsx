@@ -96,23 +96,6 @@ export const notesDataSlice=createSlice({
             state.loading=false
             state.errMessage=action.payload
         })
-        // .addCase(updateNote.pending,(state)=>{
-        //     state.loading=true
-        // })
-        // .addCase(updateNote.fulfilled,(state,action)=>{
-        //     const noteFound=state.notes.find(state.notes(noteObj=>noteObj._id===action.payload.id))
-        //     state.loading=false
-        //     state.success=true
-        //     if(noteFound){
-        //         state.notes.push(noteFound.replace(action.payload))
-        //     }
-            
-        // })
-        // .addCase(updateNote.rejected,(state,action)=>{
-        //     state.loading=false
-        //     state.errMessage=action.payload
-        // })
-       
     }
 })
 
