@@ -19,7 +19,7 @@ const setNote=asyncHandler(async(req,res)=>{
         noteTitle:req.body.noteTitle
     })
     res.status(200).json({message:createdNote});
-})
+}) 
 
 const updateNote=asyncHandler(async(req,res)=>{
     console.log(req)
