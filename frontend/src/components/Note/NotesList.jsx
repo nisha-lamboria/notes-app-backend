@@ -35,7 +35,7 @@ const NotesList = () => {
         </div>
         )}
     </div>
-  )
+  ) 
 }
 
 export {NotesList};
