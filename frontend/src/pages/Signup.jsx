@@ -20,7 +20,7 @@ const Signup = () => {
   const {user,errMessage}=useSelector(state=>state.auth);
 
   const onChange = (e) => {
-    setAuthForm(() => ({
+    setAuthForm(() => ({ 
       ...authForm,
       [e.target.name]: e.target.value,
     }));
