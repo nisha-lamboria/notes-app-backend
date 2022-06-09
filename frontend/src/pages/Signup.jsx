@@ -55,7 +55,7 @@ const Signup = () => {
             <div className={`${AuthStyles["input-wrapper"]} flex-col`}>
               <label
                 htmlFor="name"
-                className={`${AuthStyles["text-label"]}`}
+                className={`${AuthStyles["text-label"]}`} 
               >
                 UserName<span className={`${AuthStyles["req-feild"]}`}>*</span>
               </label>
