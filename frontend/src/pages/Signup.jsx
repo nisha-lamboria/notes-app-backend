@@ -32,7 +32,7 @@ const Signup = () => {
       dispatch(signup({name,email,password}))
     }else{
       toastBox(`passwords don't match`,'error')
-    } 
+    }  
   };
 
   useEffect(()=>{
