@@ -5,7 +5,7 @@ import { useToast } from "../custom hooks/useToast";
 import { Header } from "../components/Header";
 import { useEffect, useState } from "react";
 import {useSelector,useDispatch} from "react-redux";
-import { signup,reset } from "../features/authSlice";
+import { signup,reset } from "../features/authSlice"; 
 
 const Signup = () => {
   const [authForm, setAuthForm] = useState({
