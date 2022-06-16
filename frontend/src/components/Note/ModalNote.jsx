@@ -1,7 +1,7 @@
 import NoteStyles from "./Note.module.css";
 import { useState} from "react";
 import { updateNote } from "../../features/notesSlice";
-import {useDispatch} from "react-redux";
+import {useDispatch,useSelector} from "react-redux";
 
 const ModalNote = ({ noteObj,setShowModal}) => {
     // console.log(noteObj)
@@ -12,10 +12,13 @@ const ModalNote = ({ noteObj,setShowModal}) => {
 
   const dispatch=useDispatch();
 
+  // const {notes}=useSelector((state)=>state.notesData);
+  // console.log(notes);
+
   const editNote=(e,noteId)=>{
-    // console.log(newNote)
+    console.log(newNote)
     e.preventDefault();
-    dispatch(updateNote(noteId,newNote))
+    dispatch(updateNote({noteId,newNote}))
   }
 
   return (

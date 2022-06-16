@@ -32,13 +32,13 @@ export const removeNoteService=async(noteId,token)=>{
     return response.data;
 }
 
-export const updateNoteService=async(noteId,newNoteObj,token)=>{
+export const updateNoteService=async(noteId,token,newNote)=>{
     const config={
         headers:{
-            Authorization:`Bearer ${token}`
+            Authorization:`Bearer ${token}` 
         }
     }
-    const response=await axios.put(`${API_ENDPOINTS}/notes/${noteId}`,newNoteObj,config);
+    const response=await axios.put(`${API_ENDPOINTS}/notes/${noteId}`,newNote,config);
     console.log(response);
     return response.data;
 }
