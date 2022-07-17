@@ -1,7 +1,7 @@
 import NoteStyles from "./Note.module.css";
 import { useState} from "react";
 import { updateNote } from "../../features/notesSlice";
-import {useDispatch,useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
 const ModalNote = ({ noteObj,setShowModal}) => {
     // console.log(noteObj)
