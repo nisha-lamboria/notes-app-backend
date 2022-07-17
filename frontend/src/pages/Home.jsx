@@ -19,7 +19,7 @@ const Home = () => {
       console.log(errMessage)
     }
     if (!user) {
-      navigate("/login");
+      navigate("login");
     }
     dispatch(getNotes());
     // eslint-disable-next-line
