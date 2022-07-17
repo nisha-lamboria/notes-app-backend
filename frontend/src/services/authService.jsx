@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_ENDPOINTS='http://localhost:5000/api/users/'
+const API_ENDPOINTS='/api/users'
 
 export const signupService=async(user)=>{
     const response=await axios.post(`${API_ENDPOINTS}/signup`,user)
